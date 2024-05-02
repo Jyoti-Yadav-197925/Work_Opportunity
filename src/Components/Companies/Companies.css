@@ -1,0 +1,117 @@
+/* .c-container{
+    justify-content: space-around;
+    gap: 1rem;
+    background-color: #fff;
+}
+
+.c-container>img{
+    width: 9rem;
+    height: 4rem;
+} */
+
+@keyframes scrollX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.AppContainer {
+  width: 100vw;
+  height: 65vh;
+  color: #000000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  justify-content: space-around;
+  /* gap: 1rem; */
+}
+
+.Wrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.Note {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  /* color: #290d49; */
+  color: rgba(10, 1, 57, 0.755);  
+  
+}
+
+.Text {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #02203c;
+}
+
+.Marquee {
+  display: flex;
+  width: 1200px;
+  /* height: 30px; */
+  /* width: 9rem; */
+  height: 5rem;
+  overflow: hidden;
+  user-select: none;
+  /* border: 1px solid red; */
+  /* background-color: white; */
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+.MarqueeGroup {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  white-space: nowrap;
+  width: 100%;
+  /* height: 70%; */
+  animation: scrollX 20s linear infinite;
+}
+
+.MarqueeGroup2 {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  white-space: nowrap;
+  width: 100%;
+  animation: scrollX 20s linear infinite reverse -3s;
+}
+
+.ImageGroup {
+  display: grid;
+  place-items: center;
+
+  width: clamp(10rem, 1rem + 40vmin, 30rem);
+  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+}
+
+.Image {
+  object-fit: contain;
+  width: 279%;
+  height: 120%;
+  border-radius: 0.5rem;
+  aspect-ratio: 16/9;
+  padding: 7px 9px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
